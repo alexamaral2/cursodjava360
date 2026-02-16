@@ -11,6 +11,10 @@ public class Account {
         return false;
     }
 
+    boolean deposit(String amount){
+        return deposit(Double.parseDouble(amount));
+    }
+
     boolean withdraw(double amount) {
         if (amount > 0) {
             balance -= amount;
