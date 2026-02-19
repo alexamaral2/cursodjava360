@@ -1,18 +1,24 @@
 public class EncapsulatedAccount {
-    private String accountNumber;
-    private String accountOwner;
+    private final String accountNumber;
+    private final String accountOwner;
     private double balance;
 
-    public EncapsulatedAccount() {
+
+    public EncapsulatedAccount(String accountNumber, String accountOwner, double balance) {
+        this.accountNumber = accountNumber;
+        this.accountOwner = accountOwner;
+        this.balance = balance;
+    }
+    public EncapsulatedAccount(String accountNumber, double balance) {
+        this(accountNumber, null, balance);
+    }
+
+    public EncapsulatedAccount(String accountNumber, String accountOwner) {
+       this(accountNumber, accountOwner, 0);
     }
 
     public EncapsulatedAccount(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public EncapsulatedAccount(String accountNumber, double balance) {
-        this.accountNumber = accountNumber;
-        this.balance = balance;
+        this(accountNumber, null, 0);
     }
 
     boolean deposit(double amount) {
@@ -50,12 +56,6 @@ public class EncapsulatedAccount {
 
     public String getAccountOwner() {
         return accountOwner;
-    }
-
-    public void setAccountOwner(String accountOwner) {
-        if (!accountOwner.isBlank()) {
-            this.accountOwner = accountOwner;
-        }
     }
 
     public double getBalance() {
