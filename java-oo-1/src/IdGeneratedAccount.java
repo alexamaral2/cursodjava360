@@ -52,4 +52,8 @@ public class IdGeneratedAccount {
         return balance;
     }
 
+    public static int getCurrentId() {
+        return currentId;
+    }
+
 }

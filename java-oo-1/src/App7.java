@@ -8,5 +8,8 @@ public class App7 {
 
         var a3 = new IdGeneratedAccount("Paulo");
         System.out.println(a3.getAccountNumber());
+
+        int id = IdGeneratedAccount.getCurrentId();
+        System.out.println(id);
     }
 }
