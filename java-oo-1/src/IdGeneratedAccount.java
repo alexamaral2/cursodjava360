@@ -2,8 +2,13 @@ public class IdGeneratedAccount {
     private final String accountNumber;
     private final String accountOwner;
     private double balance;
+    private static int currentId;
 
-    private static int currentId = 1;
+    static {
+        System.out.println("Inicializando o currentId");
+        currentId = 1;
+
+    }
 
     public IdGeneratedAccount(String accountOwner) {
         this.accountNumber = "000" + currentId++;
