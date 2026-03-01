@@ -1,4 +1,6 @@
 public class IdGeneratedAccount {
+    public static final int INITIAL_VALUE = 10;
+
     private final String accountNumber;
     private final String accountOwner;
     private double balance;
@@ -6,7 +8,7 @@ public class IdGeneratedAccount {
 
     static {
         System.out.println("Inicializando o currentId");
-        currentId = 1;
+        currentId = INITIAL_VALUE;
 
     }
 
