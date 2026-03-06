@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 public class Rectangle {
     private final double width;
     private final double height;

@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 public class Watch {
     Pointer hour = new Pointer();
     Pointer minute = new Pointer();

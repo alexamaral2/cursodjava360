@@ -1,3 +1,5 @@
+package br.com.javainsider.app;
+
 public class App8 {
     private int id;
 

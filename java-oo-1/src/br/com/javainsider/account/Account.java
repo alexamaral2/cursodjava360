@@ -1,9 +1,11 @@
-public class Account {
-    String accountNumber;
-    String accountOwner;
-    double balance;
+package br.com.javainsider.account;
 
-    boolean deposit(double amount) {
+public class Account {
+    public String accountNumber;
+    public String accountOwner;
+    public double balance;
+
+    public boolean deposit(double amount) {
         if (amount > 0) {
             balance += amount;
             return true;
@@ -15,7 +17,7 @@ public class Account {
         return deposit(Double.parseDouble(amount));
     }
 
-    boolean withdraw(double amount) {
+    public boolean withdraw(double amount) {
         if (amount > 0) {
             balance -= amount;
             return true;
@@ -23,12 +25,12 @@ public class Account {
         return false;
     }
 
-    void transfer(double amount, Account targetAccount) {
+    public void transfer(double amount, Account targetAccount) {
         withdraw(amount);
         targetAccount.deposit(amount);
     }
 
-    void printBalance(){
+    public void printBalance(){
         System.out.println("Balance: R$ " + balance);
     }
 

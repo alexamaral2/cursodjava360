@@ -1,24 +1,23 @@
-public class EncapsulatedAccount {
+package br.com.javainsider.account;
+
+public class IdGeneratedAccount {
+    public static final int INITIAL_VALUE = 10;
+
     private final String accountNumber;
     private final String accountOwner;
     private double balance;
+    private static int currentId;
 
+    static {
+        System.out.println("Inicializando o currentId");
+        currentId = INITIAL_VALUE;
 
-    public EncapsulatedAccount(String accountNumber, String accountOwner, double balance) {
-        this.accountNumber = accountNumber;
+    }
+
+    public IdGeneratedAccount(String accountOwner) {
+        this.accountNumber = "000" + currentId++;
         this.accountOwner = accountOwner;
-        this.balance = balance;
-    }
-    public EncapsulatedAccount(String accountNumber, double balance) {
-        this(accountNumber, null, balance);
-    }
-
-    public EncapsulatedAccount(String accountNumber, String accountOwner) {
-       this(accountNumber, accountOwner, 0);
-    }
-
-    public EncapsulatedAccount(String accountNumber) {
-        this(accountNumber, null, 0);
+        this.balance = 0.0;
     }
 
     boolean deposit(double amount) {
@@ -60,6 +59,10 @@ public class EncapsulatedAccount {
 
     public double getBalance() {
         return balance;
+    }
+
+    public static int getCurrentId() {
+        return currentId;
     }
 
 }

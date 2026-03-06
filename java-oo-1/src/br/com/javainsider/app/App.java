@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.account.Account;
+
 public class App {
     public static void main(String[] args) {
         Account a1 = new Account();
@@ -19,5 +23,7 @@ public class App {
         System.out.println(a2.accountNumber);
         System.out.println(a2.accountOwner);
         System.out.println(a2.balance);
+
+        String s = "a";
     }
 }
