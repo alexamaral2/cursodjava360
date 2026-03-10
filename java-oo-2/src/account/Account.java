@@ -42,4 +42,13 @@ public class Account {
         System.out.println("Number: " + number);
         System.out.println("Balance: " + balance);
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "owner='" + owner + '\'' +
+                ", number='" + number + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }
