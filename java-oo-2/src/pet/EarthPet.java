@@ -1,6 +1,7 @@
 package pet;
 
-public class EarthPet extends Pet{
+public abstract class EarthPet extends Pet{
+
     public void walk(){
         System.out.println("EarthPet walking");
     }

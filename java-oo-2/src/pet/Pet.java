@@ -1,6 +1,6 @@
 package pet;
 
-public class Pet {
+public abstract class Pet {
     private String color;
 
     public String getColor() {
