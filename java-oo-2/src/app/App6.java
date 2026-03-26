@@ -16,9 +16,9 @@ public class App6 {
         p1.feed(9);
         System.out.println(p1.getAmountEaten());
 
-        Pet p3 = new Pet();
-        p1.feed(10);
-        p1.feed(5);
-        System.out.println(p1.getAmountEaten());
+        //Pet p3 = new Pet();
+        //p1.feed(10);
+        //p1.feed(5);
+        //System.out.println(p1.getAmountEaten());
     }
 }
