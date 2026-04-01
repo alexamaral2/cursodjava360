@@ -6,4 +6,9 @@ public class Dog extends EarthPet{
     public void talk() {
         System.out.println("Auauaua");
     }
+
+    @Override
+    public void sleep(int time) {
+        System.out.println("Dog sleeping");
+    }
 }
