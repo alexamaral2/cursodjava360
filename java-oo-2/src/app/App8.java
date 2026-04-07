@@ -2,7 +2,6 @@ package app;
 
 import generator.Generator;
 import generator.Person;
-import generator.RandomGenerator;
 import generator.SequenceGenerator;
 
 public class App8 {
