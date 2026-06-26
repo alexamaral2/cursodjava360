@@ -1,4 +1,4 @@
-package app;
+package string;
 
 public class ExExtractAndTransform {
     public static void main(String[] args) {

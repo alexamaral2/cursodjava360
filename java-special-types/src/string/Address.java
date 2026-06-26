@@ -1,4 +1,4 @@
-package app;
+package string;
 
 public class Address {
     private String street;
